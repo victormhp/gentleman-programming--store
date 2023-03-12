@@ -1,0 +1,98 @@
+::selection {
+  background-color: var(--clr-light-gentleman);
+}
+
+:focus {
+  outline: 2px dashed var(--clr-gentleman);
+  outline-offset: 3px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+  outline-offset: 0px;
+}
+
+:focus-visible {
+  outline: 2px dashed var(--clr-gentleman);
+  outline-offset: 3px;
+}
+
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: var(--clr-bg);
+  color: white;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+main {
+  --max-width: 1210px;
+  --container-padding: 1rem;
+
+  width: min(var(--max-width), 100% - (var(--container-padding) * 2));
+  margin-inline: auto;
+}
+
+select:focus,
+input[type='range']:focus {
+  outline: none;
+}
+
+button {
+  border-radius: 8px;
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+select {
+  border-radius: 4px;
+  outline: 0;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+/* Utility classes */
+.btn {
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  background-color: var(--clr-gray-400);
+  color: white;
+  padding: 0.5em 1em;
+  transition: all 0.5s ease;
+}
+
+.btn:hover {
+  background-color: var(--clr-gray-300);
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* Scrollbar Styles */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--clr-gray-200) var(--clr-bg);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--clr-gray-200);
+  border: 3px solid var(--clr-bg);
+  border-radius: 10px;
+}
