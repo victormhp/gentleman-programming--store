@@ -1,0 +1,40 @@
+.skeleton {
+  background-color: var(--clr-gray-400);
+  border-radius: 4px;
+}
+
+.skeleton.img {
+  height: 7rem;
+}
+
+.skeleton.title {
+  height: 1.5rem;
+}
+
+.skeleton.text {
+  height: 1.25rem;
+}
+
+.skeleton.btn {
+  height: 2.5rem;
+  border-radius: 8px;
+}
+
+.skeleton.width-100 {
+  width: 100%;
+}
+
+.skeleton.width-50 {
+  width: 50%;
+}
+
+/* Animation */
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
