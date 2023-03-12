@@ -1,0 +1,22 @@
+.product__element {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: var(--clr-gray-500);
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+.product__img {
+  background: white;
+  border-radius: 4px;
+  aspect-ratio: 16/9;
+  object-fit: contain;
+}
+
+.product__details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

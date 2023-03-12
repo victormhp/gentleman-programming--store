@@ -1,0 +1,23 @@
+.progress__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress {
+  border: 4px solid white;
+  border-top: 4px solid var(--clr-gentleman);
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
