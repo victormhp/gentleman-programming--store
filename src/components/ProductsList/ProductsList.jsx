@@ -8,8 +8,6 @@ function ProductsList() {
   const { filteredProducts } = useFilters();
   const { isLoading } = getProducts();
 
-  console.log(filteredProducts);
-
   const content = isLoading
     ? [...Array(12).keys()].map((i) => {
         return <SkeletonProducts key={i} />;
