@@ -3,8 +3,8 @@ import { Routes, Route } from 'react-router-dom';
 import { Header, Footer, Progress } from './components';
 import { CartProvider } from './context/cart';
 
-const Home = lazy(() => import('./pages/Home'));
-const ProductsPage = lazy(() => import('./pages/ProductsPage'));
+const Home = lazy(() => import('./pages/Home/Home'));
+const ProductsPage = lazy(() => import('./pages/ProductsPage/ProductsPage'));
 const About = lazy(() => import('./pages/About'));
 const CartPage = lazy(() => import('./pages/CartPage'));
 

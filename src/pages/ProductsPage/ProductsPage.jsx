@@ -1,9 +1,9 @@
-import { FiltersProvider } from '../context/filters';
-import { Filters, ProductsList } from '../components';
+import { FiltersProvider } from '../../context/filters';
+import { Filters, ProductsList } from '../../components';
 
 function ProductsPage() {
   return (
-    <main className='container'>
+    <main className='container '>
       <FiltersProvider>
         <Filters />
         <ProductsList />
