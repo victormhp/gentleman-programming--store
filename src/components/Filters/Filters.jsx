@@ -40,7 +40,7 @@ function Filters() {
         <div className='filters__item'>
           <label htmlFor='category'>Category:</label>
           <select id={categoryFilter} onChange={handleChangeCategory}>
-            <option defaultValue='all'>All</option>
+            <option value='all'>All</option>
             <option value='computer'>Computers</option>
             <option value='laptop'>Laptops</option>
             <option value='monitor'>Monitors</option>
@@ -60,22 +60,23 @@ function Filters() {
 
         <div className='filters__item'>
           <label htmlFor='price'>Price Starting At:</label>
-          <input
-            className='range'
-            type='range'
-            id={minPriceFilter}
-            min='0'
-            max='15000'
-            step='100'
-            onChange={handleChangeMinPrice}
-          />
-          <span>${minPrice}</span>
+          <div className='filters__price'>
+            <input
+              className='range'
+              type='range'
+              id={minPriceFilter}
+              min='0'
+              max='15000'
+              step='100'
+              onChange={handleChangeMinPrice}
+            />
+            <span>${minPrice}</span>
+          </div>
         </div>
+        <button className='btn filters__btn' aria-label='Apply filters' onClick={handleClick}>
+          Apply
+        </button>
       </div>
-
-      <button className='btn filters__btn' aria-label='Search Product' onClick={handleClick}>
-        Apply
-      </button>
     </section>
   );
 }
