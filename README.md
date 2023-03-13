@@ -1,7 +1,7 @@
 # Gentleman Store
 
 ![](https://pbs.twimg.com/profile_banners/1431921074762047492/1662382332/1500x500)
-Web Store for interview challenges by Gentleman Programming.
+Web Store for interview challenges by **Gentleman Programming**.
 
 ## Technologies
 
@@ -30,7 +30,7 @@ In order to setup the project you need to have install node and pnpm:
 
 ## Configuration
 
-To configure the page, you will need to create a .env file in the root directory of the project. You can use the .example.env file as a template:
+To configure the page, you will need to create a .env file in the root directory of the project. You can use the .env.example file as a template:
 
 ```
 VITE_APP_FIREBASE_API_KEY=''
