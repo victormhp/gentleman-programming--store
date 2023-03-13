@@ -1,5 +1,11 @@
+import { Hero } from '../components/';
+
 function Home() {
-  return <div>Home</div>;
+  return (
+    <main className='container'>
+      <Hero />
+    </main>
+  );
 }
 
 export default Home;
