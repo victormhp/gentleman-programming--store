@@ -1,7 +1,5 @@
 .primary-header {
-  border-bottom: 1px solid var(--clr-gray-400);
-  box-shadow: 0 10px 30px var(--clr-gray-500);
-  padding: 0rem 1rem;
+  padding: 1rem;
 }
 
 .primary-navigation {
@@ -35,7 +33,7 @@
 }
 
 .nav__list li a:hover {
-  color: var(--clr-gentleman);
+  color: var(--clr-gentleman-300);
 }
 
 .mobile-nav-toggle {
@@ -54,14 +52,14 @@
 
 .nav__cart:hover svg g,
 .nav__cart:focus-visible svg g {
-  stroke: var(--clr-gentleman);
+  stroke: var(--clr-gentleman-300);
 }
 
 .nav__cart-count {
   position: absolute;
   bottom: -5px;
   right: -5px;
-  background-color: var(--clr-gentleman);
+  background-color: var(--clr-gentleman-400);
   color: #fff;
   border-radius: 50%;
   width: 20px;

@@ -11,7 +11,7 @@
   transition: all 0.3s ease-in;
 }
 
-.footer__link:hover, 
+.footer__link:hover,
 .footer__link:focus-visible {
-  color: var(--clr-gentleman);
+  color: var(--clr-gentleman-300);
 }

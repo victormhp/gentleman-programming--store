@@ -6,7 +6,7 @@
 
 .progress {
   border: 4px solid white;
-  border-top: 4px solid var(--clr-gentleman);
+  border-top: 4px solid var(--clr-gentleman-400);
   border-radius: 50%;
   width: 64px;
   height: 64px;

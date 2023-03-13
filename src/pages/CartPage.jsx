@@ -2,7 +2,7 @@ import { Cart } from '../components';
 
 function CartPage() {
   return (
-    <main>
+    <main className='container'>
       <Cart />
     </main>
   );

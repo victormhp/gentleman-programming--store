@@ -3,7 +3,7 @@ import { Filters, ProductsList } from '../components';
 
 function ProductsPage() {
   return (
-    <main>
+    <main className='container'>
       <FiltersProvider>
         <Filters />
         <ProductsList />

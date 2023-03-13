@@ -1,9 +1,11 @@
 :root {
-  --clr-gentleman: hsl(315, 74%, 59%);
-  --clr-light-gentleman: hsl(315, 70%, 65%);
-  --clr-bg: hsl(0, 0%, 10%);
+  --clr-gentleman-500: hsl(315, 68%, 43%);
+  --clr-gentleman-400: hsl(315, 74%, 59%);
+  --clr-gentleman-300: hsl(315, 70%, 65%);
+
+  --clr-gray-600: hsl(0, 0%, 9%);
   --clr-gray-500: hsl(0, 0%, 15%);
   --clr-gray-400: hsl(0, 0%, 25%);
-  --clr-gray-300: hsl(0, 0%, 35%);
+  --clr-gray-300: hsl(0, 0%, 32%);
   --clr-gray-200: hsl(0, 0%, 45%);
 }
