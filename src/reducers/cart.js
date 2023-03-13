@@ -1,4 +1,4 @@
-import { formatNumber } from '../utils/formatNumber';
+import { formatPrice } from '../utils/formatPrice';
 
 export const cartInitialState = [];
 
@@ -24,7 +24,7 @@ export const cartReducer = (state, action) => {
 
         newState[productInCart].quantity += 1;
         newState[productInCart].price += price;
-        newState[productInCart].priceFormatted = formatNumber(newState[productInCart].price);
+        newState[productInCart].priceFormatted = formatPrice(newState[productInCart].price);
 
         return newState;
       }
@@ -51,7 +51,7 @@ export const cartReducer = (state, action) => {
 
         newState[productInCart].quantity -= 1;
         newState[productInCart].price -= price;
-        newState[productInCart].priceFormatted = formatNumber(newState[productInCart].price);
+        newState[productInCart].priceFormatted = formatPrice(newState[productInCart].price);
 
         return newState;
       }

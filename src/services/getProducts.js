@@ -1,6 +1,6 @@
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebase/firebase';
-import { formatNumber } from '../utils/formatNumber';
+import { formatPrice } from '../utils/formatPrice';
 import { useState, useEffect } from 'react';
 
 export function getProducts() {
@@ -32,7 +32,7 @@ export function getProducts() {
       id: product.id,
       name: product.name,
       price: product.price,
-      priceFormatted: formatNumber(product.price),
+      priceFormatted: formatPrice(product.price),
       image: product.image,
       category: product.category,
     };

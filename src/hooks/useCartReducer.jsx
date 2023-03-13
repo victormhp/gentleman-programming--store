@@ -1,6 +1,6 @@
 import { useReducer } from 'react';
 import { cartInitialState, cartReducer, CART_ACTIONS } from '../reducers/cart';
-import { formatNumber } from '../utils/formatNumber';
+import { formatPrice } from '../utils/formatPrice';
 
 export function useCartReducer() {
   const [state, dispatch] = useReducer(cartReducer, cartInitialState);
@@ -30,7 +30,7 @@ export function useCartReducer() {
 
   const totalProducts = state.reduce((acc, curr) => acc + curr.quantity, 0);
 
-  const totalCost = formatNumber(state.reduce((acc, curr) => acc + curr.price, 0));
+  const totalCost = formatPrice(state.reduce((acc, curr) => acc + curr.price, 0));
 
   return {
     state,
