@@ -14,8 +14,6 @@ export function getProducts() {
     const getData = async () => {
       try {
         setIsLoading(true);
-        setError(null);
-
         const data = await getDocs(productsCollectionRef);
         const dataDocs = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
         setProductsData(dataDocs);
@@ -40,5 +38,5 @@ export function getProducts() {
     };
   });
 
-  return { products, isLoading };
+  return { products, isLoading, error };
 }

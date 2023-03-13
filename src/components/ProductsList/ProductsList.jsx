@@ -5,14 +5,16 @@ import { useFilters } from '../../hooks/useFilters';
 import './ProductsList.css';
 
 function ProductsList() {
-  const { filterProducts } = useFilters();
+  const { filteredProducts } = useFilters();
   const { isLoading } = getProducts();
+
+  console.log(filteredProducts);
 
   const content = isLoading
     ? [...Array(12).keys()].map((i) => {
         return <SkeletonProducts key={i} />;
       })
-    : filterProducts.map((product) => {
+    : filteredProducts.map((product) => {
         return <Products product={product} key={product.id} />;
       });
 
