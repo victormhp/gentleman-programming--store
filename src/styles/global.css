@@ -20,6 +20,9 @@
 body {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   background-color: var(--clr-gray-600);
+  background-image: url('./bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
   color: white;
 }
 
