@@ -15,7 +15,17 @@ export function useFilters() {
     throw new Error('useFilters must be used within a FiltersProvider');
   }
 
-  const filteredProducts = products
+  const searchedProducts = products.filter((product) => {
+    const productName = product.name.toLowerCase();
+
+    if (filters.search.length > 0) {
+      return productName.includes(filters.search);
+    }
+
+    return true;
+  });
+
+  const filteredProducts = searchedProducts
     .filter((product) => {
       return (
         product.price >= filters.minPrice &&

@@ -1,6 +1,5 @@
 import { useState, useId } from 'react';
 import { useFilters } from '../../hooks/useFilters';
-
 import './Filters.css';
 
 function Filters() {
@@ -21,6 +20,7 @@ function Filters() {
   const handleChangeOrder = (event) => {
     setOrder(event.target.value);
   };
+
   const handleChangeMinPrice = (event) => {
     setMinPrice(event.target.value);
   };
@@ -62,7 +62,6 @@ function Filters() {
           <label htmlFor='price'>Price Starting At:</label>
           <div className='filters__price'>
             <input
-              className='range'
               type='range'
               id={minPriceFilter}
               min='0'
