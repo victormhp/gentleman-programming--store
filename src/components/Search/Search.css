@@ -7,6 +7,7 @@
 
 .search__input {
   width: 100%;
+  outline: none;
   background: white;
   color: var(--clr-gray-400);
   caret-color: var(--clr-gray-400);
