@@ -7,6 +7,7 @@
 .products__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  align-self: start;
   gap: 1.5rem;
   width: 100%;
 }
