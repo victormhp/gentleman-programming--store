@@ -26,7 +26,7 @@
 
 .hero__text .hero__btn {
   width: fit-content;
-  padding-inline: 3rem;
+  padding-inline: 5rem;
   background-color: var(--clr-gentleman-400);
   border-radius: 8px;
   text-decoration: none;
@@ -46,6 +46,10 @@
   .hero__text {
     align-items: center;
     text-align: center;
+  }
+
+  .hero__text .hero__btn {
+    padding-inline: 3rem;
   }
 
   .hero img {
