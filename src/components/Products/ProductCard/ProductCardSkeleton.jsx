@@ -1,15 +1,15 @@
-import Skeleton from './Skeleton';
+import Skeleton from '../../Skeletons/Skeleton';
 
-function SkeletonProducts() {
+function ProductCardSkeleton() {
   return (
-    <li className='product__element'>
+    <article className='product-card'>
       <Skeleton classes='img width-100' />
       <Skeleton classes='title width-100' />
       <Skeleton classes='title width-100' />
       <Skeleton classes='text width-50' />
       <Skeleton classes='btn width-100' />
-    </li>
+    </article>
   );
 }
 
-export default SkeletonProducts;
+export default ProductCardSkeleton;
