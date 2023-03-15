@@ -102,7 +102,7 @@ html {
 }
 
 /* Close icon for search bar */
-input::-webkit-search-cancel-button {
+::-webkit-search-cancel-button {
   -webkit-appearance: none;
   content: url('/close.svg');
   cursor: pointer;
