@@ -14,8 +14,14 @@
   gap: 3rem;
 }
 
-.nav__logo {
-  width: 96px;
+#logo {
+  width: 80px;
+  transition: transform 0.3s ease;
+}
+
+#logo:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
 
 .nav__list {
@@ -26,7 +32,7 @@
 .nav__list li a {
   font-size: 1.125rem;
   font-weight: 600;
-  color: white;
+  color: #d4d4d4;
   text-decoration: none;
   transition: 0.3s ease-out;
 }
@@ -75,7 +81,7 @@
 }
 
 .desktop-search {
-  display: flex;
+  display: block;
 }
 
 .mobile-search {
@@ -135,6 +141,7 @@
   }
 
   .mobile-search {
-    display: flex;
+    display: block;
+    justify-content: center;
   }
 }

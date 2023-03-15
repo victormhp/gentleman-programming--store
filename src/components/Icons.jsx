@@ -31,7 +31,7 @@ export function CloseIcon() {
 export function CartIcon() {
   return (
     <svg width='32' height='32' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
-      <g stroke='#fff' strokeWidth={2} strokeLinejoin='round'>
+      <g stroke='#d4d4d4' strokeWidth={2} strokeLinejoin='round'>
         <path d='M4.51 10.434c.233-1.637.35-2.456.914-2.945C5.988 7 6.815 7 8.47 7h7.061c1.655 0 2.482 0 3.046.49.564.488.68 1.307.915 2.944l.857 6c.303 2.125.455 3.187-.143 3.876-.598.69-1.671.69-3.817.69H7.612c-2.146 0-3.219 0-3.817-.69-.598-.69-.446-1.751-.143-3.876l.857-6Z' />
         <path d='M9 11V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v6' strokeLinecap='round' />
       </g>
@@ -105,17 +105,6 @@ export function ClearCartIcon() {
       <path d='M17 17h-11v-11' />
       <path d='M9.239 5.231l10.761 .769l-1 7h-2m-4 0h-7' />
       <path d='M3 3l18 18' />
-    </svg>
-  );
-}
-
-export function SearchIcon() {
-  return (
-    <svg width='16' height='16' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
-      <g stroke='#fff' strokeWidth={2}>
-        <path d='m17 17 4 4' strokeLinecap='round' strokeLinejoin='round' />
-        <path d='M19 11a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z' />
-      </g>
     </svg>
   );
 }

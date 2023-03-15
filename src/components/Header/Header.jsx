@@ -25,11 +25,9 @@ function Header() {
         </div>
 
         <div className='nav__links'>
-          <div className='nav__logo'>
-            <NavLink to='/'>
-              <img src='./logo.svg' alt='Logo' />
-            </NavLink>
-          </div>
+          <NavLink to='/' id='logo'>
+            <img src='./logo.svg' alt='gentleman logo' />
+          </NavLink>
 
           <ul className={`nav__list ${mobileToggle && 'nav__menu'}`} role='list'>
             <li>

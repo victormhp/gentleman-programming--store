@@ -25,6 +25,10 @@
   align-items: center;
 }
 
+.filters__price input {
+  width: 100%;
+}
+
 @media (max-width: 50em) {
   .filters {
     gap: 1rem;

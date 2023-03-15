@@ -2,13 +2,14 @@
   margin-top: auto;
   text-align: center;
   padding: 1em 0;
+  color: var(--clr-gray-100);
 }
 
 .footer__link {
   text-decoration: none;
   font-weight: 600;
-  color: white;
   transition: all 0.3s ease-in;
+  color: var(--clr-gray-100);
 }
 
 .footer__link:hover,
