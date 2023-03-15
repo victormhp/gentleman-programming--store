@@ -1,4 +1,4 @@
-import { formatPrice } from '../utils/formatPrice';
+import { formatPrice } from '../utils';
 
 export const cartInitialState = [];
 
@@ -12,7 +12,7 @@ export const CART_ACTIONS = {
 export const cartReducer = (state, action) => {
   const { type: actionType, payload: actionPayload } = action;
 
-  switch (action.type) {
+  switch (actionType) {
     case CART_ACTIONS.ADD_TO_CART: {
       const { id } = actionPayload;
       const productInCart = state.findIndex((item) => item.id === id);
@@ -63,6 +63,7 @@ export const cartReducer = (state, action) => {
     case CART_ACTIONS.REMOVE_ALL_INSTANCES: {
       const { id } = actionPayload;
       const newState = state.filter((item) => item.id !== id);
+
       return newState;
     }
 
