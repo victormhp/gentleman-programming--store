@@ -14,7 +14,6 @@ export function useFilters() {
   if (filters === undefined || setFilters === undefined) {
     throw new Error('useFilters must be used within a FiltersProvider');
   }
-
   const searchedProducts = products.filter((product) => {
     const productName = product.name.toLowerCase();
 
