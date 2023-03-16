@@ -1,24 +1,27 @@
 import { useFilters } from '../../hooks/useFilters';
-import { useFiltersReducer } from '../../hooks/useFiltersReducer';
-import { useId } from 'react';
+import { useInputs } from '../../hooks/useInputs';
 import { useNavigate } from 'react-router-dom';
+import { useId } from 'react';
 import './Search.css';
 
 function Search({ className }) {
   const { setFilters } = useFilters();
-  const { state, setSearch } = useFiltersReducer();
+  const { input, setInput, inputInitialState } = useInputs();
 
-  const searchProduct = useId();
+  const searchId = useId();
   const navigate = useNavigate();
+
+  const handleSearchChange = (event) => {
+    const { value } = event.target;
+    setInput({ ...input, search: value });
+  };
 
   const handleSearch = (event) => {
     if (event.key === 'Enter') {
       event.preventDefault();
 
-      setFilters(() => ({
-        ...state,
-        search: state.search,
-      }));
+      setInput({ ...inputInitialState, search: input.search });
+      setFilters({ ...inputInitialState, search: input.search });
 
       navigate('/products');
     }
@@ -26,13 +29,13 @@ function Search({ className }) {
 
   return (
     <div className={className}>
-      <form className='search__form' role='search' noValidate>
+      <form className='search__form' role='search'>
         <input
           className='search__input'
-          id={searchProduct}
+          id={searchId}
           type='search'
-          value={state.search}
-          onChange={setSearch}
+          value={input.search}
+          onChange={handleSearchChange}
           onKeyDown={handleSearch}
           placeholder='Search...'
           autoComplete='off'
