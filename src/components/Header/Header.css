@@ -82,6 +82,7 @@
 
 .desktop-search {
   display: block;
+  width: 300px;
 }
 
 .mobile-search {
