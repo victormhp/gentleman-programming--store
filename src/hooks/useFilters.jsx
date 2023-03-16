@@ -33,5 +33,5 @@ export function useFilters() {
     })
     .sort(orderOptions[filters.order]);
 
-  return { setFilters, filteredProducts };
+  return { filters, setFilters, filteredProducts };
 }
