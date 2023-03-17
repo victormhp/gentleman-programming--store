@@ -1,20 +1,9 @@
-::selection {
-  background-color: var(--clr-gentleman-300);
-}
-
-:focus {
-  outline: 2px dashed var(--clr-gentleman-400);
-  outline-offset: 3px;
-}
-
-:focus:not(:focus-visible) {
-  outline: none;
-  outline-offset: 0px;
-}
-
-:focus-visible {
-  outline: 2px dashed var(--clr-gentleman-400);
-  outline-offset: 3px;
+#root {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+  justify-content: center;
 }
 
 body {
@@ -24,14 +13,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
-}
-
-#root {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 select:focus,
@@ -107,4 +88,25 @@ html {
   content: url('/close.svg');
   cursor: pointer;
   width: 16px;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--clr-gentleman-300);
+}
+
+/* Focus */
+:focus {
+  outline: 2px dashed var(--clr-gentleman-400);
+  outline-offset: 3px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+  outline-offset: 0px;
+}
+
+:focus-visible {
+  outline: 2px dashed var(--clr-gentleman-400);
+  outline-offset: 3px;
 }

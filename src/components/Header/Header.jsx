@@ -17,7 +17,7 @@ function Header() {
       <Helmet>
         <body className={mobileToggle && 'overflow-hidden'} />
       </Helmet>
-      <nav className='primary-navigation'>
+      <nav id='nav' className='primary-navigation'>
         <div className='mobile-nav-toggle'>
           <button onClick={handleMobileToggle} aria-label='Menu'>
             {mobileToggle ? <CloseIcon /> : <BurgerIcon />}
@@ -31,7 +31,13 @@ function Header() {
 
           <ul className={`nav__list ${mobileToggle && 'nav__menu'}`} role='list'>
             <li>
-              <NavLink to='' onClick={() => setMobileToggle(false)}>
+              <NavLink
+                to=''
+                onClick={() => setMobileToggle(false)}
+                className={({ isActive, isPending }) =>
+                  isPending ? 'pending' : isActive ? 'active' : ''
+                }
+              >
                 Home
               </NavLink>
             </li>
