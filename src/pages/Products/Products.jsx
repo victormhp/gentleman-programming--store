@@ -3,7 +3,7 @@ import './Products.css';
 
 function ProductsPage() {
   return (
-    <main className='container main'>
+    <main className='container main-products'>
       <Filters />
       <Products />
     </main>
