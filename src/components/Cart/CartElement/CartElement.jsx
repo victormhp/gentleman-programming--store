@@ -1,17 +1,9 @@
-import { Link } from 'react-router-dom';
+import { Quantity } from '../../Buttons';
 import { RemoveFromCartIcon } from '../../Icons';
+import { Link } from 'react-router-dom';
 import './CartElement.css';
 
-function CartElement({
-  image,
-  name,
-  nameFormatted,
-  priceFormatted,
-  quantity,
-  addToCart,
-  removeFromCart,
-  removeAllInstances,
-}) {
+function CartElement({ product, image, name, nameFormatted, priceFormatted, removeAllInstances }) {
   return (
     <li className='cart-element'>
       <div className='cart-element__image-container'>
@@ -25,22 +17,7 @@ function CartElement({
           <h3>{name}</h3>
         </Link>
         <div className='cart-element__buttons'>
-          <div className='cart-element__quantity'>
-            <button
-              className='btn cart-element__btn'
-              aria-label='Remove element'
-              onClick={removeFromCart}
-            >
-              -
-            </button>
-            <p>
-              <span>Quantity: </span>
-              {quantity}
-            </p>
-            <button className='btn cart-element__btn' aria-label='Add element' onClick={addToCart}>
-              +
-            </button>
-          </div>
+          <Quantity product={product} />
           <div>
             <button
               className='btn cart-element__btn'

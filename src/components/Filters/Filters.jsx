@@ -8,12 +8,6 @@ function Filters() {
   const categoryId = useId();
 
   const { filters, setFilters, filtersInitialState } = useFilters();
-  // const [price, setPrice] = useState(0);
-
-  // const handleOnChangePrice = (event) => {
-  //   const { value } = event.target;
-  //   setPrice(value);
-  // };
 
   const handleFilters = (event) => {
     const { name, value } = event.target;
@@ -24,17 +18,6 @@ function Filters() {
     event.preventDefault();
     setFilters(filtersInitialState);
   };
-
-  // const handleFilters = (event) => {
-  //   event.preventDefault();
-
-  //   setFilters({
-  //     ...input,
-  //     category: input.category,
-  //     order: input.order,
-  //     minPrice: input.minPrice,
-  //   });
-  // };
 
   return (
     <aside className='filters'>

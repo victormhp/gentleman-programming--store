@@ -14,6 +14,7 @@ function Cart() {
         <ul className='cart__list' role='list'>
           {cart.map((product) => (
             <CartElement
+              product={product}
               key={product.id}
               addToCart={() => addToCart(product)}
               removeFromCart={() => removeFromCart(product)}
