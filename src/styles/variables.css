@@ -4,8 +4,9 @@
   --clr-gentleman-300: hsl(315, 70%, 65%);
 
   --clr-gray-600: hsl(0, 0%, 9%);
-  --clr-gray-500: hsl(0, 0%, 15%);
+  --clr-gray-500: rgb(38, 38, 38);
   --clr-gray-400: hsl(0, 0%, 25%);
   --clr-gray-300: hsl(0, 0%, 32%);
   --clr-gray-200: hsl(0, 0%, 45%);
+  --clr-gray-100: hsl(0, 0%, 83%);
 }

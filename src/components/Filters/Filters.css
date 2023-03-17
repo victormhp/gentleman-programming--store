@@ -20,8 +20,13 @@
 
 .filters__price {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+}
+
+.filters__price input {
+  width: 100%;
 }
 
 @media (max-width: 50em) {

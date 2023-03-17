@@ -1,6 +1,6 @@
 import { useReducer } from 'react';
 import { cartInitialState, cartReducer, CART_ACTIONS } from '../reducers/cart';
-import { formatPrice } from '../utils/formatPrice';
+import { formatPrice } from '../utils';
 
 export function useCartReducer() {
   const [state, dispatch] = useReducer(cartReducer, cartInitialState);

@@ -9,13 +9,22 @@ const orderOptions = {
 
 export function useFilters() {
   const { products } = getProducts();
-  const { filters, setFilters } = useContext(FiltersContext);
+  const { filters, setFilters, filtersInitialState } = useContext(FiltersContext);
 
   if (filters === undefined || setFilters === undefined) {
     throw new Error('useFilters must be used within a FiltersProvider');
   }
+  const searchedProducts = products.filter((product) => {
+    const productName = product.name.toLowerCase();
 
-  const filteredProducts = products
+    if (filters.search.length > 0) {
+      return productName.includes(filters.search);
+    }
+
+    return true;
+  });
+
+  const filteredProducts = searchedProducts
     .filter((product) => {
       return (
         product.price >= filters.minPrice &&
@@ -24,5 +33,5 @@ export function useFilters() {
     })
     .sort(orderOptions[filters.order]);
 
-  return { setFilters, filteredProducts };
+  return { filters, setFilters, filteredProducts, filtersInitialState };
 }
