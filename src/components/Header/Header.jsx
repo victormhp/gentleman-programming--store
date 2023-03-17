@@ -46,11 +46,6 @@ function Header() {
                 Products
               </NavLink>
             </li>
-            <li>
-              <NavLink to='/about' onClick={() => setMobileToggle(false)}>
-                About
-              </NavLink>
-            </li>
           </ul>
         </div>
 
