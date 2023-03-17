@@ -62,6 +62,10 @@ select {
   overflow: hidden;
 }
 
+#nav a.active {
+  color: var(--clr-gentleman-300);
+}
+
 /* Scrollbar Styles */
 html {
   scrollbar-width: thin;
