@@ -1,5 +1,4 @@
 import { useFilters } from '../../hooks/useFilters';
-import { useInputs } from '../../hooks/useInputs';
 import { useId } from 'react';
 import './Filters.css';
 
@@ -8,36 +7,41 @@ function Filters() {
   const orderPriceId = useId();
   const categoryId = useId();
 
-  const { input, setInput } = useInputs();
-  const { setFilters } = useFilters();
+  const { filters, setFilters, filtersInitialState } = useFilters();
+  // const [price, setPrice] = useState(0);
 
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setInput({ ...input, [name]: value });
-  };
+  // const handleOnChangePrice = (event) => {
+  //   const { value } = event.target;
+  //   setPrice(value);
+  // };
 
   const handleFilters = (event) => {
-    event.preventDefault();
-
-    setFilters({
-      ...input,
-      category: input.category,
-      order: input.order,
-      minPrice: input.minPrice,
-    });
+    const { name, value } = event.target;
+    setFilters({ ...filters, [name]: value });
   };
+
+  const handleResetFilters = (event) => {
+    event.preventDefault();
+    setFilters(filtersInitialState);
+  };
+
+  // const handleFilters = (event) => {
+  //   event.preventDefault();
+
+  //   setFilters({
+  //     ...input,
+  //     category: input.category,
+  //     order: input.order,
+  //     minPrice: input.minPrice,
+  //   });
+  // };
 
   return (
     <aside className='filters'>
       <form className='filters__container'>
         <div className='filters__item'>
           <label htmlFor='category'>Category:</label>
-          <select
-            id={categoryId}
-            name='category'
-            value={input.category}
-            onChange={handleInputChange}
-          >
+          <select id={categoryId} name='category' value={filters.category} onChange={handleFilters}>
             <option value='all'>All</option>
             <option value='computer'>Computers</option>
             <option value='laptop'>Laptops</option>
@@ -49,7 +53,7 @@ function Filters() {
 
         <div className='filters__item'>
           <label htmlFor='price-order'>Sort by:</label>
-          <select id={orderPriceId} name='order' value={input.order} onChange={handleInputChange}>
+          <select id={orderPriceId} name='order' value={filters.order} onChange={handleFilters}>
             <option value='featured'>Featured</option>
             <option value='low-high'>Price: Low to High</option>
             <option value='high-low'>Price: High To Low</option>
@@ -63,17 +67,17 @@ function Filters() {
               type='range'
               id={minPriceId}
               name='minPrice'
-              value={input.minPrice || 0}
-              onChange={handleInputChange}
+              value={filters.minPrice || 0}
+              onChange={handleFilters}
               min='0'
               max='15000'
               step='100'
             />
-            <span>${input.minPrice}</span>
+            <span>${filters.minPrice}</span>
           </div>
         </div>
-        <button className='btn' aria-label='Apply filters' onClick={handleFilters}>
-          Apply
+        <button className='btn' aria-label='Apply filters' onClick={handleResetFilters}>
+          Reset
         </button>
       </form>
     </aside>

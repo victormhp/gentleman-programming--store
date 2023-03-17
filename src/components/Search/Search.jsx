@@ -1,27 +1,25 @@
 import { useFilters } from '../../hooks/useFilters';
-import { useInputs } from '../../hooks/useInputs';
 import { useNavigate } from 'react-router-dom';
-import { useId } from 'react';
+import { useId, useState } from 'react';
 import './Search.css';
 
 function Search({ className }) {
-  const { setFilters } = useFilters();
-  const { input, setInput, inputInitialState } = useInputs();
+  const { setFilters, filtersInitialState } = useFilters();
 
-  const searchId = useId();
   const navigate = useNavigate();
+  const [search, setSearch] = useState('');
+  const searchId = useId();
 
   const handleSearchChange = (event) => {
     const { value } = event.target;
-    setInput({ ...input, search: value });
+    setSearch(value);
   };
 
   const handleSearch = (event) => {
     if (event.key === 'Enter') {
       event.preventDefault();
 
-      setInput({ ...inputInitialState, search: input.search });
-      setFilters({ ...inputInitialState, search: input.search });
+      setFilters({ ...filtersInitialState, search });
 
       navigate('/products');
     }
@@ -34,7 +32,7 @@ function Search({ className }) {
           className='search__input'
           id={searchId}
           type='search'
-          value={input.search}
+          value={search}
           onChange={handleSearchChange}
           onKeyDown={handleSearch}
           placeholder='Search...'

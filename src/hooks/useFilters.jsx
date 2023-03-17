@@ -9,7 +9,7 @@ const orderOptions = {
 
 export function useFilters() {
   const { products } = getProducts();
-  const { filters, setFilters } = useContext(FiltersContext);
+  const { filters, setFilters, filtersInitialState } = useContext(FiltersContext);
 
   if (filters === undefined || setFilters === undefined) {
     throw new Error('useFilters must be used within a FiltersProvider');
@@ -33,5 +33,5 @@ export function useFilters() {
     })
     .sort(orderOptions[filters.order]);
 
-  return { filters, setFilters, filteredProducts };
+  return { filters, setFilters, filteredProducts, filtersInitialState };
 }

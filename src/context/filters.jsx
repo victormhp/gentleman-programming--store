@@ -10,7 +10,16 @@ export function FiltersProvider({ children }) {
     minPrice: 0,
   });
 
+  const filtersInitialState = {
+    search: '',
+    category: 'all',
+    order: 'featured',
+    minPrice: 0,
+  };
+
   return (
-    <FiltersContext.Provider value={{ filters, setFilters }}>{children}</FiltersContext.Provider>
+    <FiltersContext.Provider value={{ filters, setFilters, filtersInitialState }}>
+      {children}
+    </FiltersContext.Provider>
   );
 }
