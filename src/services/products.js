@@ -26,5 +26,3 @@ export async function searchProducts() {
     throw new Error('Error getting products');
   }
 }
-
-export default searchProducts;

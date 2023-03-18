@@ -1,6 +1,7 @@
 import { useFilters } from '../../hooks/useFilters';
 import { useNavigate } from 'react-router-dom';
 import { useId, useState } from 'react';
+
 import './Search.css';
 
 function Search({ className }) {
