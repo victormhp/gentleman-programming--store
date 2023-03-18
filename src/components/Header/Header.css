@@ -1,5 +1,5 @@
 .primary-header {
-  padding: 1rem 0;
+  padding: 1rem;
 }
 
 .primary-navigation {
@@ -89,7 +89,7 @@
   display: none;
 }
 
-@media (max-width: 55em) {
+@media (max-width: 50em) {
   .primary-header {
     display: flex;
     flex-direction: column;

@@ -1,7 +1,7 @@
 import { Filters, Products } from '../../components';
-import './Products.css';
+import './Main.css';
 
-function ProductsPage() {
+function Main() {
   return (
     <main className='container main-products'>
       <Filters />
@@ -10,4 +10,4 @@ function ProductsPage() {
   );
 }
 
-export default ProductsPage;
+export default Main;

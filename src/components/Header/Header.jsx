@@ -13,7 +13,7 @@ function Header() {
   const { totalProducts } = useCart();
 
   return (
-    <header className='container primary-header'>
+    <header className='primary-header'>
       <Helmet>
         <body className={mobileToggle && 'overflow-hidden'} />
       </Helmet>

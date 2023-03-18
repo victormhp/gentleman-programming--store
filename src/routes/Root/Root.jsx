@@ -1,15 +1,17 @@
+import { FiltersProvider } from '../../context/filters';
+import { CartProvider } from '../../context/cart';
 import { Header, Footer } from '../../components';
 import { Outlet } from 'react-router-dom';
 
 function Root() {
   return (
-    <>
-      <Header />
-      <div id='detail'>
+    <FiltersProvider>
+      <CartProvider>
+        <Header />
         <Outlet />
-      </div>
-      <Footer />
-    </>
+        <Footer />
+      </CartProvider>
+    </FiltersProvider>
   );
 }
 
