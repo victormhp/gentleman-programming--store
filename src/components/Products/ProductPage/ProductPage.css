@@ -68,6 +68,10 @@
   gap: 2rem;
 }
 
+.product-article__description {
+  font-size: 1.125rem;
+}
+
 .product-article__quantity {
   display: flex;
   gap: 1rem;
@@ -131,6 +135,10 @@
     display: inline-block;
     aspect-ratio: 16/9;
     object-fit: contain;
+  }
+
+  .product-article__description {
+    font-size: 1rem;
   }
 
   .product-page__related {

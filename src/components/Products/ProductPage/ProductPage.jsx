@@ -49,11 +49,7 @@ function ProductPage() {
             <figure className='product-page__img-mobile'>
               <img src={productCurrent.image} alt={productCurrent.name} />
             </figure>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis cupiditate officia
-              repellat accusantium totam. Dicta enim atque fugiat numquam sequi nulla laborum non ab
-              itaque! Adipisci perferendis dolor delectus commodi!
-            </p>
+            <p className='product-article__description'>{productCurrent.description}</p>
             <div className='product-article__quantity'>
               <label htmlFor='quantity'>Quantity:</label>
               <select id={quantityId} name='quantity' value={quantity} onChange={handleSelect}>
