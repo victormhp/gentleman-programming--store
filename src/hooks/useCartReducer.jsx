@@ -5,10 +5,10 @@ import { formatPrice } from '../utils';
 export function useCartReducer() {
   const [state, dispatch] = useReducer(cartReducer, cartInitialState);
 
-  const addToCart = (product) =>
+  const addToCart = (product, num) =>
     dispatch({
       type: CART_ACTIONS.ADD_TO_CART,
-      payload: product,
+      payload: { ...product, num },
     });
 
   const removeFromCart = (product) =>

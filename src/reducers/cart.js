@@ -14,7 +14,7 @@ export const cartReducer = (state, action) => {
 
   switch (actionType) {
     case CART_ACTIONS.ADD_TO_CART: {
-      const { id } = actionPayload;
+      const { id, num } = actionPayload;
       const productInCart = state.findIndex((item) => item.id === id);
 
       if (productInCart >= 0) {
@@ -22,7 +22,7 @@ export const cartReducer = (state, action) => {
         const quantity = newState[productInCart].quantity;
         const price = newState[productInCart].price / quantity;
 
-        newState[productInCart].quantity += 1;
+        newState[productInCart].quantity += num;
         newState[productInCart].price += price;
         newState[productInCart].priceFormatted = formatPrice(newState[productInCart].price);
 
@@ -33,7 +33,7 @@ export const cartReducer = (state, action) => {
         ...state,
         {
           ...actionPayload,
-          quantity: 1,
+          quantity: num,
         },
       ];
 
