@@ -4,14 +4,13 @@ import './Quantity.css';
 function Quantity({ product }) {
   const { cart: state, addToCart, removeFromCart } = useCart();
   const productIndex = state.findIndex((item) => item.id === product.id);
-  const productCart = state.find((item) => item.id === product.id);
 
   return (
     <div className='cart-element__quantity'>
       <button
         className='btn cart-element__btn'
         aria-label='Remove element'
-        onClick={() => removeFromCart(productCart)}
+        onClick={() => removeFromCart(product)}
       >
         -
       </button>
@@ -22,7 +21,7 @@ function Quantity({ product }) {
       <button
         className='btn cart-element__btn'
         aria-label='Add element'
-        onClick={() => addToCart(productCart)}
+        onClick={() => addToCart(product, 1)}
       >
         +
       </button>
