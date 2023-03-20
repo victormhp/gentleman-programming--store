@@ -1,5 +1,5 @@
 import { BurgerIcon, CloseIcon, CartIcon } from '../Icons';
-import Search from '../Search/Search';
+import { Search } from '../Search/Search';
 import { Helmet } from 'react-helmet';
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
@@ -52,7 +52,7 @@ function Header() {
         <div className='nav__actions'>
           <Search className={'desktop-search'} />
           <NavLink to='/cart' className='nav__cart'>
-            <CartIcon />
+            <CartIcon width={32} height={32} />
             <div className='nav__cart-count'>
               <span>{totalProducts}</span>
             </div>
