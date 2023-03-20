@@ -1,11 +1,10 @@
-import { AddToCart } from '../../Buttons';
 import { Link } from 'react-router-dom';
 import './ProductCard.css';
 
-function ProductCard({ product }) {
+export function ProductCard({ product, bgColor }) {
   return (
-    <article className='product-card'>
-      <Link to={`/products/${product.nameFormatted}`}>
+    <Link to={`/products/${product.nameFormatted}`}>
+      <article className={`product-card ${bgColor}`}>
         <div className='product-card__img-container'>
           <img
             className='product-card__img'
@@ -14,17 +13,11 @@ function ProductCard({ product }) {
             alt={product.name}
           />
         </div>
-      </Link>
-
-      <div className='product-card__info'>
-        <Link to={`/products/${product.nameFormatted}`}>
+        <div className='produict-card__details'>
           <h3 className='product-card__name'>{product.name}</h3>
-        </Link>
-        <p>{product.priceFormatted}</p>
-        <AddToCart product={product} />
-      </div>
-    </article>
+          <p className='product-card__price'>{product.priceFormatted}</p>
+        </div>
+      </article>
+    </Link>
   );
 }
-
-export default ProductCard;
