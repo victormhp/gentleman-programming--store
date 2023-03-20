@@ -19,7 +19,7 @@ function Home() {
             </Link>
           </div>
         </div>
-        <img src='./illustration.png' alt='Hero Section Image' />
+        <img src='/illustration.png' alt='Hero Section Image' />
       </section>
     </main>
   );

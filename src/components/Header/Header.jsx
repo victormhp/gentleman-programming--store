@@ -26,13 +26,13 @@ function Header() {
 
         <div className='nav__links'>
           <NavLink to='/' id='logo'>
-            <img src='./logo.svg' alt='gentleman logo' />
+            <img src='/logo.svg' alt='gentleman logo' />
           </NavLink>
 
           <ul className={`nav__list ${mobileToggle && 'nav__menu'}`} role='list'>
             <li>
               <NavLink
-                to=''
+                to='/'
                 onClick={() => setMobileToggle(false)}
                 className={({ isActive, isPending }) =>
                   isPending ? 'pending' : isActive ? 'active' : ''
