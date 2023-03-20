@@ -1,6 +1,6 @@
 import { useContext } from 'react';
+import { useLoaderData } from 'react-router-dom';
 import { FiltersContext } from '../context/filters';
-import { getProducts } from '../services/getProducts';
 
 const orderOptions = {
   'low-high': (a, b) => a.price - b.price,
@@ -8,7 +8,7 @@ const orderOptions = {
 };
 
 export function useFilters() {
-  const { products } = getProducts();
+  const { products } = useLoaderData();
   const { filters, setFilters, filtersInitialState } = useContext(FiltersContext);
 
   if (filters === undefined || setFilters === undefined) {

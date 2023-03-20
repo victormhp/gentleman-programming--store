@@ -1,5 +1,5 @@
 import { BurgerIcon, CloseIcon, CartIcon } from '../Icons';
-import Search from '../Search/Search';
+import { Search } from '../Search/Search';
 import { Helmet } from 'react-helmet';
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
@@ -13,7 +13,7 @@ function Header() {
   const { totalProducts } = useCart();
 
   return (
-    <header className='container primary-header'>
+    <header className='primary-header'>
       <Helmet>
         <body className={mobileToggle && 'overflow-hidden'} />
       </Helmet>
@@ -46,18 +46,13 @@ function Header() {
                 Products
               </NavLink>
             </li>
-            <li>
-              <NavLink to='/about' onClick={() => setMobileToggle(false)}>
-                About
-              </NavLink>
-            </li>
           </ul>
         </div>
 
         <div className='nav__actions'>
           <Search className={'desktop-search'} />
           <NavLink to='/cart' className='nav__cart'>
-            <CartIcon />
+            <CartIcon width={32} height={32} />
             <div className='nav__cart-count'>
               <span>{totalProducts}</span>
             </div>

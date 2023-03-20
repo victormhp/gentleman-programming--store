@@ -1,21 +1,31 @@
-import { ProductCard, ProductCardSkeleton } from '../ProductCard';
-import { getProducts } from '../../../services/getProducts';
+import { ProductCardSkeleton } from '../ProductCard/ProductCardSkeleton';
+import { ProductCard } from '../ProductCard/ProductCard';
 import { useFilters } from '../../../hooks/useFilters';
+import { useLoaderData, Await } from 'react-router-dom';
+import { Suspense } from 'react';
 import './ProductsList.css';
+
+function ProductSkeletonList() {
+  return [...Array(12).keys()].map((i) => {
+    return <ProductCardSkeleton key={i} />;
+  });
+}
 
 function ProductsList() {
   const { filteredProducts } = useFilters();
-  const { isLoading } = getProducts();
+  const { productsPromise } = useLoaderData();
 
-  const content = isLoading
-    ? [...Array(12).keys()].map((i) => {
-        return <ProductCardSkeleton key={i} />;
-      })
-    : filteredProducts.map((product) => {
-        return <ProductCard product={product} key={product.id} />;
-      });
-
-  return <section className='products'>{content}</section>;
+  return (
+    <section className='products'>
+      <Suspense fallback={<ProductSkeletonList />}>
+        <Await resolve={productsPromise}>
+          {filteredProducts.map((product) => (
+            <ProductCard product={product} bgColor={'color-gray-500'} key={product.id} />
+          ))}
+        </Await>
+      </Suspense>
+    </section>
+  );
 }
 
 export default ProductsList;

@@ -1,8 +1,8 @@
 import Skeleton from '../../Skeletons/Skeleton';
 
-function ProductCardSkeleton() {
+export function ProductCardSkeleton() {
   return (
-    <article className='product-card'>
+    <article className='product-card color-gray-500'>
       <Skeleton classes='img width-100' />
       <Skeleton classes='title width-100' />
       <Skeleton classes='title width-100' />
@@ -11,5 +11,3 @@ function ProductCardSkeleton() {
     </article>
   );
 }
-
-export default ProductCardSkeleton;

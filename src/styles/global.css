@@ -21,10 +21,8 @@ input:focus {
 }
 
 button {
-  border-radius: 8px;
   background: transparent;
   border: 1px solid transparent;
-  cursor: pointer;
 }
 
 select {
@@ -35,6 +33,14 @@ select {
 }
 
 /* Utility classes */
+.color-gray-500 {
+  background-color: var(--clr-gray-500);
+}
+
+.color-gray-400 {
+  background-color: var(--clr-gray-400);
+}
+
 .container {
   --max-width: 1350px;
   --container-padding: 1rem;
@@ -48,18 +54,24 @@ select {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  background-color: var(--clr-gray-400);
+  background-color: var(--clr-gray-300);
   color: white;
   padding: 0.5em 1em;
+  border-radius: 8px;
+  cursor: pointer;
   transition: all 0.5s ease;
 }
 
 .btn:hover {
-  background-color: var(--clr-gray-300);
+  background-color: var(--clr-gray-400);
 }
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+#nav a.active {
+  color: var(--clr-gentleman-300);
 }
 
 /* Scrollbar Styles */

@@ -1,0 +1,8 @@
+#btn-buy {
+  background-color: var(--clr-gentleman-400);
+  transition: 0.3s ease;
+}
+
+#btn-buy:hover {
+  background-color: var(--clr-gentleman-500);
+}

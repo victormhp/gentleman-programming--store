@@ -1,9 +1,10 @@
 import { useFilters } from '../../hooks/useFilters';
 import { useNavigate } from 'react-router-dom';
 import { useId, useState } from 'react';
+
 import './Search.css';
 
-function Search({ className }) {
+export function Search({ className }) {
   const { setFilters, filtersInitialState } = useFilters();
 
   const navigate = useNavigate();
@@ -37,11 +38,10 @@ function Search({ className }) {
           onKeyDown={handleSearch}
           placeholder='Search...'
           autoComplete='off'
+          autoCorrect='off'
           maxLength='512'
         />
       </form>
     </div>
   );
 }
-
-export default Search;
