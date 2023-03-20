@@ -9,7 +9,7 @@
 #slider__scroller {
   --cards-displayed: 3;
   --slider-index: 0;
-  width: calc(100% - (2 * 5rem));
+  width: 100%;
   display: flex;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
@@ -31,19 +31,17 @@
 .slider__element {
   flex: 0 0 calc(100% / var(--cards-displayed));
   max-width: calc(100% / var(--cards-displayed));
-  padding: 1.5rem 0.5rem;
+  padding: 1rem 0.5rem;
 }
 
 @media (max-width: 65em) {
   #slider__scroller {
     --cards-displayed: 2;
-    width: calc(100% - 2 * 4rem);
   }
 }
 
 @media (max-width: 35em) {
   #slider__scroller {
     --cards-displayed: 1;
-    width: calc(100% - 2 * 3rem);
   }
 }
