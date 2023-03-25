@@ -10,6 +10,7 @@ Some of the technologies used in this project are the following:
 - Javascript
 - Firebase
 - React
+- React Router
 - pnpm
 
 ## Setup
